@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hitung Rata-rata</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='rerata.css') }}">
+        <!-- <link rel="stylesheet" href="../static/rerata.css"> -->
+    </head>
+    <body>
+        <script>
+            function resetForm() {
+                document.getElementById('inputData').value = '';
+                document.getElementById('jumlahAngka').innerHTML = '';
+                document.getElementById('banyakAngka').innerHTML = '';
+                document.getElementById('hasil').innerHTML = '';
+                jumlahAngka = false;
+                banyakAngka = false;
+                hasil = false;
+            };
+
+            function closeWebsite() {
+                if(confirm("Apakah Anda ingin keluar?")){
+                    window.close();
+                }
+            };
+        </script>
+
+        <div class="container">
+            <div class="navigation">
+                <a href="http://localhost:5000/" style="background-color: #4CAF50; color: white; border-radius: 4px; cursor: pointer; border: none; text-decoration: none; padding: 5px 14px; font-size: 13px;">Home</a>
+                <button onclick="resetForm()"><strong>Ulang</strong></button>
+                <button onclick="closeWebsite()"><strong>Close</strong></button>
+            </div>
+            <h1>Operasi Hitung Rata-rata</h1>
+            <form action="" method="post">
+                <div class="form-grup">
+                    <label for="inputData">Masukkan data, pisah dengan koma (',') :</label>
+                    <input type="text" name="inputData" id="inputData" required><br>
+                </div>
+
+                <div class="form-button">
+                    <button type="submit">Hitung rata-rata</button>
+                </div>
+            </form>
+            <div class="result-grup">
+                {% if jumlahAngka and banyakAngka and hasil %}
+                    <p class="result" id="jumlahAngka">Jumlah angka = {{ jumlahAngka }}</p>
+                    <p class="result" id="banyakAngka">Banyak angka = {{ banyakAngka }}</p>
+                    <p class="result" id="hasil">Hasil rata-rata {{ hasil }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>
