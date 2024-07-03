@@ -5,7 +5,5 @@ File program dapat diakses di dalam repository ini..
 
 # Informasi Program
 Nama: Dani Akhmad Maulana
-
 Program: Web Rata-rata dan Bubble Sort
-
 Created at: 03 Juli 2024
