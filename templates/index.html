@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mastering route</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+        <!-- <link rel="stylesheet" href="../static/index.css"> -->
+    </head>
+    <body>
+        <script>
+            function closeWebsite() {
+                if(confirm("Apakah Anda ingin keluar?")){
+                    window.close();
+                }
+            }
+        </script>
+        
+        <main>
+            <div class="container">
+                <div class="tombol">
+                    <button onclick="closeWebsite()"><strong>Close</strong></button>
+                </div>
+                <h1>Pilih Operasi</h1>
+                <div class="navigation">
+                    <a href="http://localhost:5000/rerata">Menghitung rata-rata</a>
+                    <a href="http://localhost:5000/bubblesort">Mengurutkan dengan Algoritma BubbleSort</a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
